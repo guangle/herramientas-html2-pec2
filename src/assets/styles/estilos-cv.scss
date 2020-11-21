@@ -1,0 +1,384 @@
+/* Estilos del CV, que siguen la metodología CSS BEM y la guia de diseño del creador de bootstrap */
+
+/* Estilos globales */
+
+body {
+  overflow-x: hidden;
+  font-family: $font-family-trispace;
+  color: #1a1a1a;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  padding-left: 15px;
+}
+
+li {
+  padding: 0 0 10px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #2c2c2c;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* layout */
+
+.contenedor {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* header */
+.header {
+  position: fixed;
+  z-index: 5;
+  width: 260px;
+  height: 100%;
+  padding: 46px;
+  background: $color1;
+}
+
+.header__avatar {
+  width: 165px;
+  height: 165px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.header__img {
+  width: 100%;
+}
+
+.header__nombre {
+  margin: 34px 0;
+}
+
+.header__titulo {
+  margin: 0 0 5px;
+  font-family: $font-family-trispace;
+  font-size: 30px;
+  font-weight: 700;
+  color: $color3;
+  letter-spacing: 1px;
+}
+
+.header__texto {
+  font-family: $font-family-trispace;
+  font-size: 15px;
+  font-weight: 300;
+  color: #d8d8e9;
+}
+
+.header__social-icons {
+  margin: 0 0 34px;
+}
+
+.lista-iconos {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.lista-iconos__item {
+  display: inline-block;
+  padding: 0 20px 0 0;
+  font-size: 16px;
+  color: $color3;
+}
+
+.lista-iconos__link {
+  font-size: 16px;
+  color: $color3;
+  &:hover {
+    font-size: 18px;
+  }
+}
+
+.lista-iconos__item:last-child {
+  padding-right: 0;
+}
+
+.header-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.header-menu__item {
+  padding-bottom: 15px;
+}
+
+.header-menu__link {
+  position: relative;
+  font-family: $font-family-trispace;
+  font-size: 12px;
+  font-weight: 400;
+  color: $color3;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: $color3;
+    text-decoration: none;
+  }
+}
+
+.copiright {
+  position: absolute;
+  bottom: 20px;
+}
+
+.copiright__texto {
+  font-family: $font-family-trispace;
+  font-size: 12px;
+  font-weight: 300;
+  color: $color3;
+}
+
+/* contenido principal */
+
+.main-content {
+  width: 740px;
+  background: $color3;
+}
+
+.seccion-cv {
+  position: relative;
+  padding: 60px 70px;
+  border-bottom: solid 1px $color3;
+}
+
+.seccion-cv__cabecera {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.seccion-cv__cabecera h2 {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: $color2;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* seccion sobre mi */
+
+.sobre-mi__info {
+  padding: 0;
+  margin-top: 40px;
+  list-style: none;
+}
+
+.sobre-mi__info li {
+  padding: 7px 0;
+  font-size: 14px;
+  font-weight: 300;
+  color: #0c0c0c;
+}
+
+.sobre-mi__info li:first-child {
+  padding-top: 0;
+}
+
+.sobre-mi__texto {
+  margin: 0;
+}
+
+.sobre-mi__habilidad {
+  margin-top: 40px;
+}
+
+.habilidad__titulo {
+  margin: 0;
+  font-family: $font-family-trispace;
+  font-size: 14px;
+}
+
+.habilidad__avance {
+  font-family: $font-family-trispace;
+  font-size: 12px;
+  font-weight: 300;
+  color: #9c9c9c;
+}
+
+.sobre-mi__llamar {
+  position: absolute;
+  top: -12px;
+  right: 0;
+  display: block;
+  padding: 5px 10px;
+  font-family: $font-family-trispace;
+  font-size: 12px;
+  font-weight: 400;
+  color: $color3;
+  background: $color1;
+  border-radius: 3px;
+}
+
+.sobre-mi__llamar:hover {
+  font-size: 14px;
+  color: $color3;
+}
+
+.cv__item--destacado {
+  margin-top: 0 !important;
+}
+
+.cv__item {
+  margin-top: 30px;
+  overflow: hidden;
+  background: $color3;
+}
+
+.cv__titulo {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.cv__subtitulo {
+  display: block;
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 300;
+  color: #666;
+}
+
+.cv__texto {
+  margin-bottom: 0;
+  line-height: 20px;
+}
+
+.cv__texto--destacado {
+  padding: 2px;
+  border: 1px $color1 dashed;
+}
+
+.cursos {
+  color: #2c2c2c;
+}
+
+.cursos__item {
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 28px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* sección referencias */
+
+.referencia-item__img {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.referencia-item__autor {
+  font-size: 12px;
+  color: #b1b1b1;
+}
+
+.btn-default {
+  position: relative;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 300;
+  color: $color3;
+  background-color: $color1;
+  border: 0;
+
+  border-radius: 3px;
+}
+
+.btn-default:hover {
+  color: $color3;
+  background-color: $color1;
+  border: 0;
+}
+
+.progress {
+  height: 4px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #e0e0e0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.progress__bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  line-height: 1px;
+  color: $color3;
+  text-align: center;
+  background-color: $color2 !important;
+  box-shadow: none;
+  transition: width 0.6s ease;
+}
+
+.form-contacto__input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #555;
+  background-color: $color3;
+  background-image: none;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: solid 1px #0c0c0c;
+  border-left: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.form-contacto__input:focus {
+  border-color: $color1;
+  outline: 0;
+  box-shadow: none;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+/* standalone rules: no hay porqué que englobar todo en la terminología BEM
+solo cuando queramos dar aportar significdo incluyendo elementos de la jerarquía en los nombres
+de las clases
+https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ */
+
+.w-90 {
+  width: 90%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
