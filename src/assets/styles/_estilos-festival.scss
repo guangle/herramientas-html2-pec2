@@ -5,29 +5,208 @@
 body {
   overflow-x: hidden;
   font-family: $font-family-trispace;
-  color: #1a1a1a;
+  color: white;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+/** Pruebas pec2 */
+.bg2 {
+  background-image: linear-gradient(
+    to bottom,
+    #5239d0,
+    #3e4dd8,
+    #285ddd,
+    #0f6bdf,
+    #0078e0,
+    #0087e5,
+    #0095e8,
+    #00a2ea,
+    #00b5ec,
+    #00c5df,
+    #00d3c6,
+    #0edda4
+  );
+  top: auto;
+  bottom: 29%;
+  width: 190px;
+  height: 250px;
 }
 
-ul {
-  padding-left: 15px;
+.contenedor-grid {
+  width: 70%;
+  margin: 5% 15%;
+
+  box-shadow: 1px 1px 100px 2px #d040b5, 1px 1px 40px 2px #d040b5 inset;
+
+  /*
+  box-shadow: 10px 10px 20px 2px #d040b5, -10px 10px 20px 2px #ff796e,
+    -10px -10px 20px 2px #ff6188, 10px -10px 20px 2px #e1cd60,
+    inset 10px 10px 20px 2px #d040b5, inset -10px 10px 20px 2px #ff796e,
+    inset -10px -10px 20px 2px #ff6188, inset 10px -10px 20px 2px #e1cd60;
+    */
 }
 
-li {
-  padding: 0 0 10px;
+.grid-container {
+  border: 1px red;
+  opacity: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(5, 100px) 75px;
+  gap: 4px 4px;
+  grid-template-areas:
+    "none none titulo titulo titulo"
+    "grupos neon1 foto1 foto1 foto1"
+    "solido ambigu foto1 foto1 foto1"
+    "logo solido2 foto2 foto3 foto4"
+    "logo solido2 foto2 foto5 foto6"
+    "degradado degradado degradado degradado degradado";
 }
 
-p {
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 28px;
-  color: #2c2c2c;
-  text-align: justify;
-  text-justify: inter-word;
+.none {
+  grid-area: none;
+  background: transparent;
+}
+
+.titulo {
+  grid-area: titulo;
+  background: transparent;
+}
+
+.grupos {
+  grid-area: grupos;
+  background: transparent;
+  text-align: center;
+  line-height: 50px;
+  font-size: 3em;
+}
+
+.neon1 {
+  grid-area: neon1;
+  background: #ff00e6;
+}
+
+.foto1 {
+  grid-area: foto1;
+  background: gray;
+}
+
+.solido {
+  grid-area: solido;
+  background-image: linear-gradient(
+    to right,
+    #5239d0,
+    #3e4dd8,
+    #285ddd,
+    #0f6bdf,
+    #0078e0,
+    #0087e5,
+    #0095e8,
+    #00a2ea,
+    #00b5ec,
+    #00c5df,
+    #00d3c6,
+    #0edda4
+  );
+}
+
+.enlaceGrid {
+  font-size: 0.5em;
+  display: block;
+}
+
+.ambigu {
+  grid-area: ambigu;
+  background: transparent;
+  text-align: center;
+  line-height: 50px;
+  font-size: 3em;
+  color: #ff6188;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.solido2 {
+  grid-area: solido2;
+  background: transparent;
+}
+
+.foto2 {
+  grid-area: foto2;
+}
+
+.foto3 {
+  grid-area: foto3;
+}
+
+.foto4 {
+  grid-area: foto4;
+}
+
+.foto5 {
+  grid-area: foto5;
+}
+
+.foto6 {
+  grid-area: foto6;
+}
+
+.degradado {
+  grid-area: degradado;
+  /*
+  background-image: linear-gradient(
+    135deg,
+    #6c22bd,
+    #8b25bb,
+    #a52bb9,
+    #bc34b7,
+    #d040b5,
+    #e645a5,
+    #f55195,
+    #ff6188,
+    #ff796e,
+    #ff965b,
+    #f5b255,
+    #e1cd60
+  );*/
+  background-image: linear-gradient(
+    to right top,
+    #6c22bd,
+    #8b25bb,
+    #a52bb9,
+    #bc34b7,
+    #d040b5,
+    #e645a5,
+    #f55195,
+    #ff6188,
+    #ff796e,
+    #ff965b,
+    #f5b255,
+    #e1cd60
+  );
+}
+
+/* PEC2 */
+#footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+#logofooter {
+  flex-grow: 2;
+}
+#enlacefooter {
+  flex-grow: 4;
+}
+#socialfooter {
+  flex-grow: 2;
+}
+
+.copyright {
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 /* layout */

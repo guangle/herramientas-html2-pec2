@@ -5,10 +5,10 @@
     <meta charset="utf-8" />
     <meta
       name="description"
-      content="Curriculum realizado para la pec1 de la asignatura Herramientas HTML y CSS"
+      content="Info del festival de música, práctica 2 de la asignatura Herramientas HTML y CSS, basada en css grid,css flexbox y bootstrap"
     />
     <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <title>CV Juan Jesús Gutiérrez - Herramientas HTML y CSS II, PEC1</title>
+    <title>Añejo Music Fest - Herramientas HTML y CSS II, PEC1</title>
 
     <link
       rel="shortcut icon"
@@ -25,9 +25,121 @@
     />
   </head>
 
+  <!-- logo de -->
+  <!-- https://codepen.io/KevinOgden/full/JEwjBB -->
+
   <body>
-    <div style="min-height: 400px; background-color: pink">
-      <h1 style="color: aliceblue">esto es ya la pec2 v001</h1>
+    <nav class="navbar navbar-expand-lg">
+      <div class="divNeon" id="textoLuminoso">
+        <h1 class="h1Neon">
+          &nbsp&nbspA<span id="offset">Ñ</span>EJO
+          <span id="offset">M</span>USIC F<span id="offset">E</span>ST&nbsp&nbsp
+        </h1>
+      </div>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="grupos.html">Grupos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="noticias.html">Noticias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ambigu.html">Ambigú</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div>
+
+      <div class="contenedor-grid">
+        <div class="grid-container">
+          <div class="none"></div>
+          <div class="titulo">
+            <div class="divTituloNeon" id="textoLuminoso">
+              <h1 class="h1TituloNeon">
+                &nbsp&nbspA<span id="offset">Ñ</span>EJO
+                <span id="offset">M</span>USIC F<span id="offset">E</span>ST&nbsp&nbsp
+              </h1>
+            </div>
+          </div>
+          <div class="grupos">
+            <i class="fas fa-music"></i>
+            <a href="grupos.html" class="enlaceGrid" >Grupos</a>
+          </div>
+          <div class="neon1"></div>
+          <div class="foto1">
+              <img src="assets/images/artista1.jpg" width="100%" height="100%" alt="Artista1"></img>
+          </div>
+          <div class="solido"></div>
+          <div class="ambigu">
+            <i class="fas fa-cocktail"></i>
+            <a href="ambigu.html" class="enlaceGrid" >Ambigú</a>
+          </div>
+          <div class="logo">
+            <img src="assets/images/ms-icon-310x310.png" width="100%" height="100%" alt="Artista1"></img>
+          </div>
+          <div class="solido2"></div>
+          <div class="foto2">
+            <img src="assets/images/artista2.jpg" width="100%" height="100%" alt="Artista1"></img>
+          </div>
+          <div class="foto3">
+            <img src="assets/images/artista3.jpg" width="100%" height="100%" alt="Artista1"></img>
+          </div>
+          <div class="foto4">
+            <img src="assets/images/artista4.jpeg" width="100%" height="100%" alt="Artista1"></img>
+          </div>
+          <div class="foto5">
+            <img src="assets/images/artista5.jpeg" width="100%" height="100%" alt="Artista1"></img>
+          </div>
+          <div class="foto6">
+            <img src="assets/images/artista6.jpg" width="100%" height="100%" alt="Artista1"></img>
+          </div>
+          <div class="degradado"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div id="logofooter" >
+        <div class="divTituloNeon" id="textoLuminoso">
+          <h1 class="h1TituloNeon">
+            &nbsp&nbspA<span id="offset">Ñ</span>EJO
+            <span id="offset">M</span>USIC F<span id="offset">E</span>ST&nbsp&nbsp
+          </h1>
+        </div>
+      </div>
+      <div id="enlacefooter">
+        <a  href="index.html">Inicio</a>
+        <a  href="grupos.html">Grupos</a>
+        <a  href="noticias.html">Noticias</a>
+        <a  href="ambigu.html">Ambigú</a>
+      </div>
+      <div id="socialfooter" >
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-twitter-square"></i>
+        <i class="fab fa-instagram-square"></i>
+      </div>
+    </div>
+    <div class="copyright" >
+      Juan Jesús Gutiérrez Ramos. PEC 2 de la asignatura Herramientas HTML y CSS II, 2020
     </div>
 
     <script src="./assets/scripts/main.js"></script>
