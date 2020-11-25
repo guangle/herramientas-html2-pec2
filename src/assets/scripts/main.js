@@ -7,21 +7,44 @@
 // import SomeModule from 'some-node-module';
 
 import "bootstrap";
-import "bootstrap/dist/css/bootstrap.css"; // Import precompiled Bootstrap css
-import "@fortawesome/fontawesome-free/css/all.css";
-import $ from "jquery";
+//import "@fortawesome/fontawesome-free/css/all.css";
 
-/**
- * Write any other JavaScript below
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  console.log("Hello, añejo music fest!");
+});
+
+/** Funcion que se ejecuta en los diferentes test que hay en la web,
+ * se encarga, en funcion de si la respuesta es correcta o no, mostrar
+ * diferentes animaciones en la tarjeta que contiene la pregunta y colorearla
+ * para que el usuario sepa si ha acertado o no
  */
 
-+( function() {
-  console.log('Hello, UOC!');
-} )();
+var respuesta = function () {
+  var correcta = this.getAttribute("es-correcta");
+  const tarjeta = this.parentElement.parentElement;
 
+  tarjeta.classList.remove("shake-horizontal");
+  tarjeta.classList.remove("jello-horizontal");
+  tarjeta.firstElementChild.classList.remove("bg-success");
+  tarjeta.firstElementChild.classList.remove("bg-danger");
+  var respuestas = tarjeta.getElementsByClassName("respuesta");
+  for (var i = 0; i < respuestas.length; i++) {
+    respuestas.item(i).classList.remove("font-weight-bold");
+  }
 
-$(".hamburger-menu, .main-nav ul li a").on( 'click', function() {
-  $(".header").toggleClass("pushed");
-  $(".main-content").toggleClass("main-pushed");
-  $('.bar').toggleClass('animate');
+  this.classList.add("font-weight-bold");
+  if (correcta == 1) {
+    tarjeta.classList.add("jello-horizontal");
+    tarjeta.firstElementChild.classList.add("bg-success");
+  } else {
+    tarjeta.classList.add("shake-horizontal");
+    tarjeta.firstElementChild.classList.add("bg-danger");
+  }
+};
+
+var respuestas = document.getElementsByClassName("respuesta");
+Array.from(respuestas).forEach(function (r) {
+  r.addEventListener("click", respuesta);
 });

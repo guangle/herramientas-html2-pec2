@@ -26,11 +26,11 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg">
-      <div class="divNeon" id="textoLuminoso">
-        <h1 class="h1Neon">
-          &nbsp&nbspA<span id="offset">Ñ</span>EJO
-          <span id="offset">M</span>USIC F<span id="offset">E</span>ST&nbsp&nbsp
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="rotulo-principal" >
+        <h1 class="rotulo-principal__titulo">
+          &nbsp&nbspA<span class="offset">Ñ</span>EJO
+          <span class="offset">M</span>USIC F<span class="offset">E</span>ST&nbsp&nbsp
         </h1>
       </div>
 
@@ -46,35 +46,223 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse header-menu" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Inicio</a>
+          <li class="nav-item active ">
+            <a class="nav-link header-menu__link" href="index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="grupos.html">Grupos</a>
+            <a class="nav-link header-menu__link" href="grupos.html">Grupos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="noticias.html">Noticias</a>
+            <a class="nav-link header-menu__link" href="noticias.html">Noticias</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ambigu.html">Ambigú</a>
+            <a class="nav-link header-menu__link" href="ambigu.html">Ambigú</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <div style="min-height: 400px; background-color: pink">
-      <h1 style="color: aliceblue">esto es ya la pec2 v001</h1>
+    <div class="contenedor-festival">
+      <div class="row" >
+        <div class="col-lg-12">
+          <h1>Ambigú (poner un subrayado mono)</h1>
+        </div>
+        <div class="col-lg-12">
+          <h1>Juego</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-sm-12">
+          <h2>La música del festival</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-sm-12">
 
-      <a href="pruebasCSSGrid.html">Pruebas CSSGRR0ID</a>
+            <iframe src="http://open.spotify.com/playlist/1F2AxMDFybaiSfEZyDjpDc" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            https://developer.spotify.com/documentation/widgets/generate/embed/
+          </div>
+        </div>
+
+      </div>
+      <div class="row" >
+        <a href="https://twitter.com/intent/tweet?button_hashtag=añejomusicfest&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #añejomusicfest</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+
+      <div class="contenedor-ambigu">
+        <div>presentación</div>
+        <div>
+          <div>
+            <h2>Juego</h2>
+            <span>¿Cómo sigue la canción? bla bla bla descripción</span>
+          </div>
+          <div class="row contenedor-preguntas">
+            <div class="col-lg-12 col-sm-12">
+              <h2>El juego del festival</h2>
+              <small
+                >Ponte a prueba e intenta adivinar la letra de las canciones.
+                ¿Lo sabes todo de tus artistas favoritos?</small
+              >
+            </div>
+
+            <div class="col-lg-4 col-sm-12">
+              <div
+                class="card card_pregunta sombra-moviendose"
+                style="width: 18rem"
+              >
+                <div class="card-header">
+                  "¿Qué pasará?, ¿qué misterio habrá?, puede ser.."
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item respuesta" es-correcta="1">
+                    Mi gran noche
+                  </li>
+                  <li class="list-group-item respuesta" es-correcta="0">
+                    Ese coche
+                  </li>
+                  <li class="list-group-item respuesta" es-correcta="0">
+                    La otra noche
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-12">
+              <div
+                class="card card_pregunta sombra-moviendose"
+                style="width: 18rem"
+              >
+                <div class="card-header">"Tengo que hacer un rosario..."</div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item respuesta" es-correcta="0">
+                    De color verde y rubí
+                  </li>
+                  <li class="list-group-item respuesta" es-correcta="0">
+                    Para entregartelo a tí
+                  </li>
+                  <li class="list-group-item respuesta" es-correcta="1">
+                    Con los dientes de marfil
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-12">
+              <div
+                class="card card_pregunta sombra-moviendose"
+                style="width: 18rem"
+              >
+                <div class="card-header">"Mi carro.. me lo robaron.."</div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item respuesta" es-correcta="0">
+                    Tuvo que ser el otro día
+                  </li>
+                  <li class="list-group-item respuesta" es-correcta="1">
+                    Anoche cuando dormía
+                  </li>
+                  <li class="list-group-item respuesta" es-correcta="0">
+                    la sinverguenza de mi tía
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row contenedor-preguntas">
+            <div class="col-lg-4 col-sm-12">
+              <div
+                class="card card_pregunta sombra-moviendose"
+                style="width: 18rem"
+              >
+                <div class="card-header">
+                  ¿Cuál es el nombre real de la niña de la puebla?
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item respuesta" es-correcta="1">
+                    Dolores Jiménez Alcántara
+                  </li>
+                  <li class="list-group-item respuesta" es-correcta="0">
+                    Marta Álvarez Díaz
+                  </li>
+                  <li class="list-group-item respuesta" es-correcta="0">
+                    Alice Roberts Harris
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-12">
+              <div
+                class="card card_pregunta sombra-moviendose"
+                style="width: 18rem"
+              >
+                <div class="card-header">
+                  De qué país es originaria Betty Missiego
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item respuesta" es-correcta="0">
+                    Nicaragua
+                  </li>
+                  <li class="list-group-item respuesta" es-correcta="0">
+                    Tailandia
+                  </li>
+                  <li class="list-group-item respuesta" es-correcta="1">
+                    Perú
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-12">
+              <div
+                class="card card_pregunta sombra-moviendose"
+                style="width: 18rem"
+              >
+                <div class="card-header">
+                  ¿En qué película NO ha participado Marisol?
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item respuesta" es-correcta="0">
+                    Tómbola
+                  </li>
+                  <li class="list-group-item respuesta" es-correcta="1">
+                    ¡Ay, pena, penita, pena!
+                  </li>
+                  <li class="list-group-item respuesta" es-correcta="0">
+                    Un rayo de luz
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>carrusel de tweets</div>
+        <div>spotify</div>
+      </div>
     </div>
 
-    La tercera página interior es de contenido completamente libre. La puedes
-    usar para enseñar cualquier cosa que sepas hacer o que hayas aprendido.
-    Algunas ideas son: una página de contacto con un formulario funcional (puede
-    ser interesante probar Netlify Forms), una galería de fotos interactiva, un
-    juego, vídeos… tweets, spotify juego
+    <div class="footer">
+      <div class="footer__titulo text-center" >
+        <img src="assets/images/ms-icon-310x310.png" width="24px" height="24px" alt="Añejo Music Fest"></img>
+        <span>AÑEJO MUSIC FEST 2020</span>
+      </div>
+      <div class="footer__enlaces text-center">
+        <div>
+          <a  href="index.html">Inicio</a>
+          <a  href="grupos.html">Grupos</a>
+          <a  href="noticias.html">Noticias</a>
+          <a  href="ambigu.html">Ambigú</a>
+        </div>
+        <div class="copyright" >
+          <span class="copiright__texto" >Juan Jesús Gutiérrez Ramos. PEC 2 de la asignatura Herramientas HTML y CSS II, 2020</span>
+        </div>
+      </div>
+      <div class="footer__social-icons text-center" >
+        <i class="fab fa-2x fa-facebook-square color-azul"></i>
+        <i class="fab fa-2x fa-twitter-square color-amarillo"></i>
+        <i class="fab fa-2x fa-instagram-square color-rosa"></i>
+      </div>
+    </div>
 
     <script src="./assets/scripts/main.js"></script>
   </body>

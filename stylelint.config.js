@@ -6,7 +6,6 @@ module.exports = {
       'stylelint-order'
     ],
     "rules": {
-      "selector-nested-pattern": "^&",
       "indentation": 2,
       "no-descending-specificity": null,
       "no-eol-whitespace": null,
@@ -288,9 +287,7 @@ module.exports = {
       'shorthand-property-no-redundant-values': true,
       'string-quotes': 'double',
       'unicode-bom': 'never',
-      'value-list-comma-newline-after': 'never-multi-line',
-      'value-list-comma-newline-before': 'never-multi-line',
-      'value-list-comma-space-after': 'always',
-      'value-no-vendor-prefix': true
+      'value-no-vendor-prefix': true,
+      'value-list-comma-newline-after': null
     }
   }

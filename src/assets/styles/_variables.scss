@@ -8,12 +8,34 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 $font-family-serif: "Georgia", "Times New Roman", serif;
 $font-family-trispace: "Trispace", sans-serif;
 
-/* paleta de colores */
+/* paleta de colores del festival */
 
-$colorA: white;
+/* Buscamos colores neon y luminosos */
+
+$colorA: #fff;
+$color_fest_rosa: #ff00e6;
+$color_fest_azul: #00b5ec;
+$color_fest_amarillo: #ffeb3b;
+$color_fest_verde: #39ff14;
+$color_fest_oscuro1: #011027;
+$color_fest_oscuro2: #000110;
+$color_fest_claro1: #f5f5f5;
 
 $color1: rgba(130, 35, 178, 1);
 $color2: rgba(217, 3, 104, 1);
 $color3: rgba(241, 233, 218, 1);
 $color4: rgba(46, 41, 78, 1);
 $color5: rgba(255, 230, 107, 1);
+
+/* Creamos nuestro propio Theme de boostrap */
+//Subimos un poco el tamaño de la letra
+$font-size-base: 1.05rem;
+//personalizamos los colores del tema
+$theme-colors: (
+  "primary": $color_fest_claro1,
+  "success": $color_fest_verde,
+  "info": $color_fest_azul,
+  "warning": $color_fest_amarillo,
+  "danger": $color_fest_rosa,
+  "dark": $color_fest_oscuro1,
+);

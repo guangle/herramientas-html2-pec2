@@ -29,11 +29,11 @@
   <!-- https://codepen.io/KevinOgden/full/JEwjBB -->
 
   <body>
-    <nav class="navbar navbar-expand-lg">
-      <div class="divNeon" id="textoLuminoso">
-        <h1 class="h1Neon">
-          &nbsp&nbspA<span id="offset">Ñ</span>EJO
-          <span id="offset">M</span>USIC F<span id="offset">E</span>ST&nbsp&nbsp
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="rotulo-principal" >
+        <h1 class="rotulo-principal__titulo">
+          &nbsp&nbspA<span class="offset">Ñ</span>EJO
+          <span class="offset">M</span>USIC F<span class="offset">E</span>ST&nbsp&nbsp
         </h1>
       </div>
 
@@ -49,19 +49,19 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse header-menu" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Inicio</a>
+          <li class="nav-item active ">
+            <a class="nav-link header-menu__link" href="index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="grupos.html">Grupos</a>
+            <a class="nav-link header-menu__link" href="grupos.html">Grupos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="noticias.html">Noticias</a>
+            <a class="nav-link header-menu__link" href="noticias.html">Noticias</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ambigu.html">Ambigú</a>
+            <a class="nav-link header-menu__link" href="ambigu.html">Ambigú</a>
           </li>
         </ul>
       </div>
@@ -69,29 +69,29 @@
 
     <div>
 
-      <div class="contenedor-grid">
+      <div class="carel-portada sombra-moviendose">
         <div class="grid-container">
           <div class="none"></div>
           <div class="titulo">
-            <div class="divTituloNeon" id="textoLuminoso">
-              <h1 class="h1TituloNeon">
-                &nbsp&nbspA<span id="offset">Ñ</span>EJO
-                <span id="offset">M</span>USIC F<span id="offset">E</span>ST&nbsp&nbsp
+            <div class="titulo-neon" >
+              <h1 class="titulo-neon__texto">
+                &nbsp&nbspA<span class="offset">Ñ</span>EJO
+                <span class="offset">M</span>USIC F<span class="offset">E</span>ST&nbsp&nbsp
               </h1>
             </div>
           </div>
-          <div class="grupos">
+          <div class="grupos color-azul">
             <i class="fas fa-music"></i>
-            <a href="grupos.html" class="enlaceGrid" >Grupos</a>
+            <a href="grupos.html" class="enlaceGrid color-azul" >Grupos</a>
           </div>
           <div class="neon1"></div>
           <div class="foto1">
               <img src="assets/images/artista1.jpg" width="100%" height="100%" alt="Artista1"></img>
           </div>
           <div class="solido"></div>
-          <div class="ambigu">
+          <div class="ambigu color-amarillo">
             <i class="fas fa-cocktail"></i>
-            <a href="ambigu.html" class="enlaceGrid" >Ambigú</a>
+            <a href="ambigu.html" class="enlaceGrid color-amarillo" >Ambigú</a>
           </div>
           <div class="logo">
             <img src="assets/images/ms-icon-310x310.png" width="100%" height="100%" alt="Artista1"></img>
@@ -104,10 +104,10 @@
             <img src="assets/images/artista3.jpg" width="100%" height="100%" alt="Artista1"></img>
           </div>
           <div class="foto4">
-            <img src="assets/images/artista4.jpeg" width="100%" height="100%" alt="Artista1"></img>
+            <img src="assets/images/artista4.jpg" width="100%" height="100%" alt="Artista1"></img>
           </div>
           <div class="foto5">
-            <img src="assets/images/artista5.jpeg" width="100%" height="100%" alt="Artista1"></img>
+            <img src="assets/images/artista5.jpg" width="100%" height="100%" alt="Artista1"></img>
           </div>
           <div class="foto6">
             <img src="assets/images/artista6.jpg" width="100%" height="100%" alt="Artista1"></img>
@@ -117,30 +117,29 @@
       </div>
     </div>
 
-    <div id="footer">
-      <div id="logofooter" >
-        <div class="divTituloNeon" id="textoLuminoso">
-          <h1 class="h1TituloNeon">
-            &nbsp&nbspA<span id="offset">Ñ</span>EJO
-            <span id="offset">M</span>USIC F<span id="offset">E</span>ST&nbsp&nbsp
-          </h1>
+    <div class="footer">
+      <div class="footer__titulo text-center" >
+        <img src="assets/images/ms-icon-310x310.png" width="24px" height="24px" alt="Añejo Music Fest"></img>
+        <span>AÑEJO MUSIC FEST 2020</span>
+      </div>
+      <div class="footer__enlaces text-center">
+        <div>
+          <a  href="index.html">Inicio</a>
+          <a  href="grupos.html">Grupos</a>
+          <a  href="noticias.html">Noticias</a>
+          <a  href="ambigu.html">Ambigú</a>
+        </div>
+        <div class="copyright" >
+          <span class="copiright__texto" >Juan Jesús Gutiérrez Ramos. PEC 2 de la asignatura Herramientas HTML y CSS II, 2020</span>
         </div>
       </div>
-      <div id="enlacefooter">
-        <a  href="index.html">Inicio</a>
-        <a  href="grupos.html">Grupos</a>
-        <a  href="noticias.html">Noticias</a>
-        <a  href="ambigu.html">Ambigú</a>
-      </div>
-      <div id="socialfooter" >
-        <i class="fab fa-facebook-square"></i>
-        <i class="fab fa-twitter-square"></i>
-        <i class="fab fa-instagram-square"></i>
+      <div class="footer__social-icons text-center" >
+        <i class="fab fa-2x fa-facebook-square color-azul"></i>
+        <i class="fab fa-2x fa-twitter-square color-amarillo"></i>
+        <i class="fab fa-2x fa-instagram-square color-rosa"></i>
       </div>
     </div>
-    <div class="copyright" >
-      Juan Jesús Gutiérrez Ramos. PEC 2 de la asignatura Herramientas HTML y CSS II, 2020
-    </div>
+
 
     <script src="./assets/scripts/main.js"></script>
   </body>

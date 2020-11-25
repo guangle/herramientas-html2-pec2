@@ -1,56 +1,23 @@
-/* Estilos del CV, que siguen la metodología CSS BEM y la guia de diseño del creador de bootstrap */
+/*
+  Estilos desarrollados para  la página del festival
+  Siguen la metodología CSS BEM y la guia de diseño del creador de bootstrap
+*/
 
 /* Estilos globales */
 
 body {
-  overflow-x: hidden;
   font-family: $font-family-trispace;
-  color: white;
 }
 
-/** Pruebas pec2 */
-.bg2 {
-  background-image: linear-gradient(
-    to bottom,
-    #5239d0,
-    #3e4dd8,
-    #285ddd,
-    #0f6bdf,
-    #0078e0,
-    #0087e5,
-    #0095e8,
-    #00a2ea,
-    #00b5ec,
-    #00c5df,
-    #00d3c6,
-    #0edda4
-  );
-  top: auto;
-  bottom: 29%;
-  width: 190px;
-  height: 250px;
-}
-
-.contenedor-grid {
+.carel-portada {
   width: 70%;
   margin: 5% 15%;
-
-  box-shadow: 1px 1px 100px 2px #d040b5, 1px 1px 40px 2px #d040b5 inset;
-
-  /*
-  box-shadow: 10px 10px 20px 2px #d040b5, -10px 10px 20px 2px #ff796e,
-    -10px -10px 20px 2px #ff6188, 10px -10px 20px 2px #e1cd60,
-    inset 10px 10px 20px 2px #d040b5, inset -10px 10px 20px 2px #ff796e,
-    inset -10px -10px 20px 2px #ff6188, inset 10px -10px 20px 2px #e1cd60;
-    */
 }
 
 .grid-container {
-  border: 1px red;
-  opacity: 1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(5, 100px) 75px;
+  grid-template-rows: repeat(5, 100px) 60px;
   gap: 4px 4px;
   grid-template-areas:
     "none none titulo titulo titulo"
@@ -59,6 +26,7 @@ body {
     "logo solido2 foto2 foto3 foto4"
     "logo solido2 foto2 foto5 foto6"
     "degradado degradado degradado degradado degradado";
+  opacity: 1;
 }
 
 .none {
@@ -73,10 +41,11 @@ body {
 
 .grupos {
   grid-area: grupos;
-  background: transparent;
-  text-align: center;
-  line-height: 50px;
   font-size: 3em;
+  line-height: 50px;
+  text-align: center;
+
+  background: transparent;
 }
 
 .neon1 {
@@ -86,7 +55,6 @@ body {
 
 .foto1 {
   grid-area: foto1;
-  background: gray;
 }
 
 .solido {
@@ -109,17 +77,18 @@ body {
 }
 
 .enlaceGrid {
-  font-size: 0.5em;
   display: block;
+  font-size: 0.5em;
 }
 
 .ambigu {
   grid-area: ambigu;
-  background: transparent;
-  text-align: center;
-  line-height: 50px;
   font-size: 3em;
+  line-height: 50px;
   color: #ff6188;
+  text-align: center;
+
+  background: transparent;
 }
 
 .logo {
@@ -153,22 +122,6 @@ body {
 
 .degradado {
   grid-area: degradado;
-  /*
-  background-image: linear-gradient(
-    135deg,
-    #6c22bd,
-    #8b25bb,
-    #a52bb9,
-    #bc34b7,
-    #d040b5,
-    #e645a5,
-    #f55195,
-    #ff6188,
-    #ff796e,
-    #ff965b,
-    #f5b255,
-    #e1cd60
-  );*/
   background-image: linear-gradient(
     to right top,
     #6c22bd,
@@ -187,26 +140,35 @@ body {
 }
 
 /* PEC2 */
-#footer {
+.footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: baseline;
+  justify-content: space-around;
 }
 
-#logofooter {
+.footer__titulo {
   flex-grow: 2;
+  margin-left: 10px;
+  span {
+    font-size: 16pt;
+    color: #ff00e6;
+  }
 }
-#enlacefooter {
+.footer__enlaces {
   flex-grow: 4;
 }
-#socialfooter {
+.footer__social-icons {
   flex-grow: 2;
+  padding-right: 10px;
+  i:hover {
+    text-shadow: 16px 16px 8px rgba(150, 150, 150, 0.93);
+  }
 }
 
 .copyright {
+  margin-bottom: 20px;
   text-align: center;
-  margin-bottom: 5px;
 }
 
 /* layout */
@@ -250,62 +212,66 @@ body {
   letter-spacing: 1px;
 }
 
-.header__texto {
-  font-family: $font-family-trispace;
-  font-size: 15px;
-  font-weight: 300;
-  color: #d8d8e9;
+/** Página para los grupos */
+.contenedor-festival {
+  width: 100%;
+  padding: 20px 15%;
 }
 
-.header__social-icons {
-  margin: 0 0 34px;
+.contenedor-grupos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-.lista-iconos {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-.lista-iconos__item {
-  display: inline-block;
-  padding: 0 20px 0 0;
-  font-size: 16px;
-  color: $color3;
+/* GRUPOS */
+.card-body {
+  color: $color_fest_oscuro1;
 }
 
-.lista-iconos__link {
-  font-size: 16px;
-  color: $color3;
-  &:hover {
-    font-size: 18px;
+.grupo {
+  margin-bottom: 20px;
+}
+
+//Mostramos mas o menos columnas en función del ancho de la pantalla
+//> ancho > 1000px --> 3 columnas
+@media only screen and (min-width: 1000px) {
+  .grupo {
+    flex: 0 1 calc(33% - 1em);
+  }
+}
+//Entre 650 y 1000 --> 2 columnas
+@media only screen and (max-width: 999px) {
+  .grupo {
+    flex: 0 1 calc(50% - 1em);
+  }
+}
+//Si la pantalla mide menos de 700 --> 1 columna
+@media only screen and (max-width: 700px) {
+  .grupo {
+    flex: 0 1 calc(100% - 1em);
   }
 }
 
-.lista-iconos__item:last-child {
-  padding-right: 0;
+.card-title {
+  font-weight: 500;
+}
+.card-text {
+  font-size: 1rem;
 }
 
 .header-menu {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.header-menu__item {
-  padding-bottom: 15px;
+  padding: 2px;
 }
 
 .header-menu__link {
-  position: relative;
   font-family: $font-family-trispace;
-  font-size: 12px;
-  font-weight: 400;
-  color: $color3;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: all 0.3s ease-in-out;
   &:hover {
-    color: $color3;
     text-decoration: none;
   }
 }
@@ -318,226 +284,9 @@ body {
 .copiright__texto {
   font-family: $font-family-trispace;
   font-size: 12px;
+  font-style: italic;
   font-weight: 300;
   color: $color3;
-}
-
-/* contenido principal */
-
-.main-content {
-  width: 740px;
-  background: $color3;
-}
-
-.seccion-cv {
-  position: relative;
-  padding: 60px 70px;
-  border-bottom: solid 1px $color3;
-}
-
-.seccion-cv__cabecera {
-  position: relative;
-  margin-bottom: 40px;
-}
-
-.seccion-cv__cabecera h2 {
-  position: relative;
-  display: inline-block;
-  margin: 0;
-  font-size: 17px;
-  font-weight: 700;
-  color: $color2;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-/* seccion sobre mi */
-
-.sobre-mi__info {
-  padding: 0;
-  margin-top: 40px;
-  list-style: none;
-}
-
-.sobre-mi__info li {
-  padding: 7px 0;
-  font-size: 14px;
-  font-weight: 300;
-  color: #0c0c0c;
-}
-
-.sobre-mi__info li:first-child {
-  padding-top: 0;
-}
-
-.sobre-mi__texto {
-  margin: 0;
-}
-
-.sobre-mi__habilidad {
-  margin-top: 40px;
-}
-
-.habilidad__titulo {
-  margin: 0;
-  font-family: $font-family-trispace;
-  font-size: 14px;
-}
-
-.habilidad__avance {
-  font-family: $font-family-trispace;
-  font-size: 12px;
-  font-weight: 300;
-  color: #9c9c9c;
-}
-
-.sobre-mi__llamar {
-  position: absolute;
-  top: -12px;
-  right: 0;
-  display: block;
-  padding: 5px 10px;
-  font-family: $font-family-trispace;
-  font-size: 12px;
-  font-weight: 400;
-  color: $color3;
-  background: $color1;
-  border-radius: 3px;
-}
-
-.sobre-mi__llamar:hover {
-  font-size: 14px;
-  color: $color3;
-}
-
-.cv__item--destacado {
-  margin-top: 0 !important;
-}
-
-.cv__item {
-  margin-top: 30px;
-  overflow: hidden;
-  background: $color3;
-}
-
-.cv__titulo {
-  margin: 0 0 10px;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.cv__subtitulo {
-  display: block;
-  margin: 0 0 10px;
-  font-size: 12px;
-  font-weight: 300;
-  color: #666;
-}
-
-.cv__texto {
-  margin-bottom: 0;
-  line-height: 20px;
-}
-
-.cv__texto--destacado {
-  padding: 2px;
-  border: 1px $color1 dashed;
-}
-
-.cursos {
-  color: #2c2c2c;
-}
-
-.cursos__item {
-  margin-left: 20px;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 28px;
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-/* sección referencias */
-
-.referencia-item__img {
-  width: 80px;
-  height: 80px;
-  overflow: hidden;
-  border-radius: 5px;
-}
-
-.referencia-item__autor {
-  font-size: 12px;
-  color: #b1b1b1;
-}
-
-.btn-default {
-  position: relative;
-  padding: 8px 16px;
-  font-size: 12px;
-  font-weight: 300;
-  color: $color3;
-  background-color: $color1;
-  border: 0;
-
-  border-radius: 3px;
-}
-
-.btn-default:hover {
-  color: $color3;
-  background-color: $color1;
-  border: 0;
-}
-
-.progress {
-  height: 4px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  background-color: #e0e0e0;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.progress__bar {
-  float: left;
-  width: 0;
-  height: 100%;
-  font-size: 12px;
-  line-height: 1px;
-  color: $color3;
-  text-align: center;
-  background-color: $color2 !important;
-  box-shadow: none;
-  transition: width 0.6s ease;
-}
-
-.form-contacto__input {
-  display: block;
-  width: 100%;
-  height: 50px;
-  padding: 0;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.6;
-  color: #555;
-  background-color: $color3;
-  background-image: none;
-  border-top: 0;
-  border-right: 0;
-  border-bottom: solid 1px #0c0c0c;
-  border-left: 0;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.form-contacto__input:focus {
-  border-color: $color1;
-  outline: 0;
-  box-shadow: none;
-}
-
-.form-group {
-  margin-bottom: 25px;
 }
 
 /* standalone rules: no hay porqué que englobar todo en la terminología BEM
@@ -545,19 +294,14 @@ solo cuando queramos dar aportar significdo incluyendo elementos de la jerarquí
 de las clases
 https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ */
 
-.w-90 {
-  width: 90%;
+.color-rosa {
+  color: $color_fest_rosa;
 }
 
-.w-80 {
-  width: 80%;
+.color-azul {
+  color: $color_fest_azul;
 }
 
-.w-60 {
-  width: 60%;
-}
-
-.justify {
-  text-align: justify;
-  text-justify: inter-word;
+.color-amarillo {
+  color: $color_fest_amarillo;
 }

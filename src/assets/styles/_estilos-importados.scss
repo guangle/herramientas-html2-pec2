@@ -1,171 +1,181 @@
-.divNeon {
+/*
+  He añadido algunos elementos css que he ido encontrando por internet y que
+  eran propicios para incluir en la web ya que siguen la estética de neones, fluors, sombras
+  que se ha querido aplicar par la construcción de la web
+*/
+
+/*
+  Todas las fuentes de inspiración están referenciadas
+  y en todos los casos ha sido necesario modificarlas
+  para quedarnos con la parte que nos interesa, adaptarlos a nuestro
+  web, usar nuestras variables, etc
+*/
+
+.rotulo-principal {
   text-align: center;
-  border: 5px solid #1086e8;
-  /*width: 300px;*/
-  border-radius: 20px;
-  animation: border-flicker 3s linear infinite;
+  border: 4px solid #1086e8;
+  border-radius: 15px;
+  animation: border-flicker 4s linear infinite;
 }
 
-.h1Neon {
-  color: #ff00e6;
+.rotulo-principal__titulo {
+  padding-top: 2px;
   font-family: "Raleway", sans-serif;
-  font-size: 32px;
-  letter-spacing: 8px;
+  font-size: 24px;
+  color: #ff00e6;
+  letter-spacing: 4px;
   animation: text-flicker 8s linear infinite;
 }
 
-.divTituloNeon {
+.titulo-neon {
+  margin: 25px 40;
   text-align: center;
   border: 5px solid #1086e8;
-  border-radius: 20px;
+  border-radius: 20;
   animation: border-flicker 4s linear infinite;
-  margin: 25px 40px;
 }
 
-.h1TituloNeon {
-  color: #ff00e6;
+.titulo-neon__texto {
   font-family: "Raleway", sans-serif;
   font-size: 24px;
+  color: #ff00e6;
   letter-spacing: 6px;
   animation: text-flicker 10s linear infinite;
 }
 
-#offset {
+.offset {
   animation: letter-flicker 2s linear infinite;
 }
 
 @keyframes text-flicker {
   0% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 0.1;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
 
   2% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 1;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
   8% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 0.1;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
   9% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 1;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
   12% {
+    text-shadow: 0 0 rgba(242, 22, 22, 1);
     opacity: 0.1;
-    text-shadow: 0px 0px rgba(242, 22, 22, 1);
   }
   20% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 1;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
   25% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 0.3;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
   30% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 1;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
 
   70% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 0.7;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
 
   72% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 0.2;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
 
   77% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 0.9;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
   100% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 0.9;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
 }
 
 @keyframes border-flicker {
   0% {
+    box-shadow: 0 0 78px 4px rgba(16, 134, 232, 0.73);
     opacity: 0.1;
-    -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
-    -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
-    box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
   }
   2% {
+    box-shadow: 0 0 78px 4px rgba(16, 134, 232, 0.73);
     opacity: 1;
-    -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
-    -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
-    box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
   }
   4% {
+    box-shadow: 0 0 78px 4px rgba(16, 134, 232, 0.73);
     opacity: 0.1;
-    -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
-    -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
-    box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
   }
 
   8% {
+    box-shadow: 0 0 78px 4px rgba(16, 134, 232, 0.73);
     opacity: 1;
-    -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
-    -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
-    box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
   }
   70% {
+    box-shadow: 0 0 78px 4px rgba(16, 134, 232, 0.73);
     opacity: 0.7;
-    -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
-    -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
-    box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
   }
   100% {
+    box-shadow: 0 0 78px 4px rgba(16, 134, 232, 0.73);
     opacity: 1;
-    -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
-    -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
-    box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
   }
 }
 
 @keyframes letter-flicker {
   0% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 0.1;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
   2% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 0.1;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
   4% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 1;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
 
   19% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 1;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
   21% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 0.1;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
   23% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 1;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
 
   80% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 1;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
   83% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 0.4;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
   87% {
+    text-shadow: 0 0 29px rgba(242, 22, 22, 1);
     opacity: 1;
-    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
+}
+
+/** tarjetas : esto lo he adaptado de
+https://codepen.io/lincohn/pen/JjPZgXw
+*/
+.grupo:hover {
+  box-shadow: inset 0 0 60 #fff, inset 20 0 80 #f0f, inset -20 0 80 #0ff,
+    inset 20 0 300 #f0f, inset -20 0 300 #0ff, 0 0 50 #fff, -10 0 80 #f0f,
+    10 0 80 #0ff;
 }
