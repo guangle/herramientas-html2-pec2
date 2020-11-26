@@ -235,6 +235,15 @@ body {
   margin-bottom: 20px;
 }
 
+.grupo__foto {
+  margin: auto;
+  display: block;
+}
+
+.grupo--destacado {
+  background: #f9f8e7;
+}
+
 //Mostramos mas o menos columnas en función del ancho de la pantalla
 //> ancho > 1000px --> 3 columnas
 @media only screen and (min-width: 1000px) {
@@ -304,4 +313,122 @@ https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ 
 
 .color-amarillo {
   color: $color_fest_amarillo;
+}
+
+.titulo-seccion {
+  text-align: center;
+}
+
+.titulo-seccion__texto {
+  font-weight: 700;
+  border-bottom: 3px solid $color_fest_amarillo;
+}
+
+/* Sección BLOG */
+.img-portada {
+  padding: 0;
+  margin-top: 0;
+}
+
+.img-portada__foto {
+  width: 100%;
+  height: auto;
+}
+
+.parrafos-blog {
+  letter-spacing: 1.5px;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.parrafos-blog__destacado {
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  line-height: 1.5rem;
+  font-size: 1.2em;
+}
+
+.texto--destacado {
+  font-weight: 700;
+  border-bottom: 3px solid #ffe66b;
+  display: inline-block;
+  line-height: 0.85;
+  text-shadow: 4px -4px 3px #ffe66b;
+}
+
+//refact
+.contenedor_titulo_principal {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 25px;
+  background: $color_fest_claro1;
+  border: 5px solid;
+
+  border-image: linear-gradient(
+      90deg,
+      #8223b2 20%,
+      #d90368 0,
+      #d90368 40%,
+      #f1e9da 0,
+      #f1e9da 60%,
+      #2e294e 0,
+      #2e294e 80%,
+      #ffe66b 0
+    )
+    5;
+}
+
+.span_titulo_1 {
+  color: $color_fest_oscuro1;
+  display: block;
+  font-size: 2em;
+}
+
+.span_titulo_2 {
+  color: $color_fest_oscuro1;
+  display: block;
+  font-size: 1.6em;
+}
+
+//Si la pantalla mide menos de 700 --> 1 columna
+@media only screen and (max-width: 700px) {
+  .contenedor_titulo_principal {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 5px;
+    background: $color_fest_claro1;
+    border: 4px solid;
+
+    border-image: linear-gradient(
+        90deg,
+        #8223b2 20%,
+        #d90368 0,
+        #d90368 40%,
+        #f1e9da 0,
+        #f1e9da 60%,
+        #2e294e 0,
+        #2e294e 80%,
+        #ffe66b 0
+      )
+      5;
+  }
+  .span_titulo_1 {
+    color: $color_fest_oscuro1;
+    display: block;
+    font-size: 1.3em;
+  }
+
+  .span_titulo_2 {
+    color: $color_fest_oscuro1;
+    display: block;
+    font-size: 1.2em;
+  }
 }
