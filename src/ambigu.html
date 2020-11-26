@@ -65,17 +65,156 @@
     </nav>
 
     <div class="contenedor-festival">
-      <div class="row" >
-        <div class="col-lg-12">
-          <h1>Ambigú (poner un subrayado mono)</h1>
-        </div>
-        <div class="col-lg-12">
-          <h1>Juego</h1>
+      <div class="row">
+        <div class="col-lg-12 titulo-seccion">
+          <h1 class="titulo-seccion__texto" >Ambigú</h1>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-12 col-sm-12">
-          <h2>La música del festival</h2>
+      <div class="row" id="subseccion_juego" >
+        <div class="col-lg-12 titulo-subseccion">
+          <h2 class="titulo-subseccion__texto" >El juego del festival</h2>
+          <small
+              >Ponte a prueba e intenta adivinar la letra de las canciones.
+              ¿Lo sabes todo de tus artistas favoritos?</small
+            >
+        </div>
+        <div class="row contenedor-preguntas">
+
+
+          <div class="col-lg-4 col-sm-12">
+            <div
+              class="card card_pregunta sombra-moviendose"
+              style="width: 18rem"
+            >
+              <div class="card-header">
+                "¿Qué pasará?, ¿qué misterio habrá?, puede ser.."
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item respuesta" es-correcta="1">
+                  Mi gran noche
+                </li>
+                <li class="list-group-item respuesta" es-correcta="0">
+                  Ese coche
+                </li>
+                <li class="list-group-item respuesta" es-correcta="0">
+                  La otra noche
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-12">
+            <div
+              class="card card_pregunta sombra-moviendose"
+              style="width: 18rem"
+            >
+              <div class="card-header">"Tengo que hacer un rosario..."</div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item respuesta" es-correcta="0">
+                  De color verde y rubí
+                </li>
+                <li class="list-group-item respuesta" es-correcta="0">
+                  Para entregartelo a tí
+                </li>
+                <li class="list-group-item respuesta" es-correcta="1">
+                  Con los dientes de marfil
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-12">
+            <div
+              class="card card_pregunta sombra-moviendose"
+              style="width: 18rem"
+            >
+              <div class="card-header">"Mi carro.. me lo robaron.."</div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item respuesta" es-correcta="0">
+                  Tuvo que ser el otro día
+                </li>
+                <li class="list-group-item respuesta" es-correcta="1">
+                  Anoche cuando dormía
+                </li>
+                <li class="list-group-item respuesta" es-correcta="0">
+                  la sinverguenza de mi tía
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row contenedor-preguntas">
+          <div class="col-lg-4 col-sm-12">
+            <div
+              class="card card_pregunta sombra-moviendose"
+              style="width: 18rem"
+            >
+              <div class="card-header">
+                ¿Cuál es el nombre real de la niña de la puebla?
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item respuesta" es-correcta="1">
+                  Dolores Jiménez Alcántara
+                </li>
+                <li class="list-group-item respuesta" es-correcta="0">
+                  Marta Álvarez Díaz
+                </li>
+                <li class="list-group-item respuesta" es-correcta="0">
+                  Alice Roberts Harris
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-12">
+            <div
+              class="card card_pregunta sombra-moviendose"
+              style="width: 18rem"
+            >
+              <div class="card-header">
+                De qué país es originaria Betty Missiego
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item respuesta" es-correcta="0">
+                  Nicaragua
+                </li>
+                <li class="list-group-item respuesta" es-correcta="0">
+                  Tailandia
+                </li>
+                <li class="list-group-item respuesta" es-correcta="1">
+                  Perú
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-12">
+            <div
+              class="card card_pregunta sombra-moviendose"
+              style="width: 18rem"
+            >
+              <div class="card-header">
+                ¿En qué película NO ha participado Marisol?
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item respuesta" es-correcta="0">
+                  Tómbola
+                </li>
+                <li class="list-group-item respuesta" es-correcta="1">
+                  ¡Ay, pena, penita, pena!
+                </li>
+                <li class="list-group-item respuesta" es-correcta="0">
+                  Un rayo de luz
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="subseccion_radio" >
+        <div class="col-lg-12 titulo-subseccion">
+          <h2 class="titulo-subseccion__texto" >Radio Añejo</h2>
         </div>
         <div class="row">
           <div class="col-lg-12 col-sm-12">
@@ -85,159 +224,22 @@
         </div>
 
       </div>
-      <div class="row" >
-        <a href="https://twitter.com/intent/tweet?button_hashtag=añejomusicfest&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #añejomusicfest</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </div>
 
-      <div class="contenedor-ambigu">
-        <div>presentación</div>
-        <div>
-          <div>
-            <h2>Juego</h2>
-            <span>¿Cómo sigue la canción? bla bla bla descripción</span>
-          </div>
-          <div class="row contenedor-preguntas">
-            <div class="col-lg-12 col-sm-12">
-              <h2>El juego del festival</h2>
-              <small
-                >Ponte a prueba e intenta adivinar la letra de las canciones.
-                ¿Lo sabes todo de tus artistas favoritos?</small
-              >
-            </div>
-
-            <div class="col-lg-4 col-sm-12">
-              <div
-                class="card card_pregunta sombra-moviendose"
-                style="width: 18rem"
-              >
-                <div class="card-header">
-                  "¿Qué pasará?, ¿qué misterio habrá?, puede ser.."
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item respuesta" es-correcta="1">
-                    Mi gran noche
-                  </li>
-                  <li class="list-group-item respuesta" es-correcta="0">
-                    Ese coche
-                  </li>
-                  <li class="list-group-item respuesta" es-correcta="0">
-                    La otra noche
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-12">
-              <div
-                class="card card_pregunta sombra-moviendose"
-                style="width: 18rem"
-              >
-                <div class="card-header">"Tengo que hacer un rosario..."</div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item respuesta" es-correcta="0">
-                    De color verde y rubí
-                  </li>
-                  <li class="list-group-item respuesta" es-correcta="0">
-                    Para entregartelo a tí
-                  </li>
-                  <li class="list-group-item respuesta" es-correcta="1">
-                    Con los dientes de marfil
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-12">
-              <div
-                class="card card_pregunta sombra-moviendose"
-                style="width: 18rem"
-              >
-                <div class="card-header">"Mi carro.. me lo robaron.."</div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item respuesta" es-correcta="0">
-                    Tuvo que ser el otro día
-                  </li>
-                  <li class="list-group-item respuesta" es-correcta="1">
-                    Anoche cuando dormía
-                  </li>
-                  <li class="list-group-item respuesta" es-correcta="0">
-                    la sinverguenza de mi tía
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="row contenedor-preguntas">
-            <div class="col-lg-4 col-sm-12">
-              <div
-                class="card card_pregunta sombra-moviendose"
-                style="width: 18rem"
-              >
-                <div class="card-header">
-                  ¿Cuál es el nombre real de la niña de la puebla?
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item respuesta" es-correcta="1">
-                    Dolores Jiménez Alcántara
-                  </li>
-                  <li class="list-group-item respuesta" es-correcta="0">
-                    Marta Álvarez Díaz
-                  </li>
-                  <li class="list-group-item respuesta" es-correcta="0">
-                    Alice Roberts Harris
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-12">
-              <div
-                class="card card_pregunta sombra-moviendose"
-                style="width: 18rem"
-              >
-                <div class="card-header">
-                  De qué país es originaria Betty Missiego
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item respuesta" es-correcta="0">
-                    Nicaragua
-                  </li>
-                  <li class="list-group-item respuesta" es-correcta="0">
-                    Tailandia
-                  </li>
-                  <li class="list-group-item respuesta" es-correcta="1">
-                    Perú
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-12">
-              <div
-                class="card card_pregunta sombra-moviendose"
-                style="width: 18rem"
-              >
-                <div class="card-header">
-                  ¿En qué película NO ha participado Marisol?
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item respuesta" es-correcta="0">
-                    Tómbola
-                  </li>
-                  <li class="list-group-item respuesta" es-correcta="1">
-                    ¡Ay, pena, penita, pena!
-                  </li>
-                  <li class="list-group-item respuesta" es-correcta="0">
-                    Un rayo de luz
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <div class="row" id="subseccion_rrss" >
+        <div class="col-lg-12 titulo-subseccion">
+          <h2 class="titulo-subseccion__texto" >El festival en redes sociales</h2>
         </div>
-        <div>carrusel de tweets</div>
-        <div>spotify</div>
+        <div class="row" >
+          <a href="https://twitter.com/intent/tweet?button_hashtag=añejomusicfest&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #añejomusicfest</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
       </div>
+
+      </div>
+
+
+
+
     </div>
 
     <div class="footer">

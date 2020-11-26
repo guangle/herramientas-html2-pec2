@@ -9,6 +9,19 @@ body {
   font-family: $font-family-trispace;
 }
 
+.contenedor-festival {
+  width: 100%;
+  padding: 20px 15%;
+}
+
+@media only screen and (max-width: 700px) {
+  //En pantalla pequeñas aplicaremos menos margen lateral
+  .contenedor-festival {
+    width: 100%;
+    padding: 20px 5%;
+  }
+}
+
 .carel-portada {
   width: 70%;
   margin: 5% 15%;
@@ -27,6 +40,36 @@ body {
     "logo solido2 foto2 foto5 foto6"
     "degradado degradado degradado degradado degradado";
   opacity: 1;
+}
+
+@media only screen and (max-width: 700px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 90px) 50px;
+    gap: 2px 2px;
+    grid-template-areas:
+      "titulo titulo titulo titulo"
+      "neon1 foto1 foto1 foto1"
+      "solido foto1 foto1 foto1"
+      "logo solido2 foto5 foto6"
+      "degradado degradado degradado degradado";
+    opacity: 1;
+  }
+  .none {
+    display: none;
+  }
+  .ambigu {
+    display: none;
+  }
+  .grupos {
+    display: none;
+  }
+  .foto2,
+  .foto3,
+  .foto4 {
+    display: none;
+  }
 }
 
 .none {
@@ -139,6 +182,11 @@ body {
   );
 }
 
+//Ordenar todo esto
+.contenedor-preguntas {
+  color: $color_fest_oscuro1;
+}
+
 /* PEC2 */
 .footer {
   display: flex;
@@ -213,10 +261,6 @@ body {
 }
 
 /** Página para los grupos */
-.contenedor-festival {
-  width: 100%;
-  padding: 20px 15%;
-}
 
 .contenedor-grupos {
   display: flex;
@@ -316,12 +360,25 @@ https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ 
 }
 
 .titulo-seccion {
+  margin-bottom: 20px;
   text-align: center;
 }
 
 .titulo-seccion__texto {
   font-weight: 700;
   border-bottom: 3px solid $color_fest_amarillo;
+}
+
+.titulo-subseccion {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.titulo-subseccion__texto {
+  font-weight: 500;
+  border-bottom: 2px solid $color_fest_azul;
 }
 
 /* Sección BLOG */
@@ -336,9 +393,10 @@ https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ 
 }
 
 .parrafos-blog {
+  margin-top: 10px;
+  margin-bottom: 10px;
   letter-spacing: 1.5px;
   text-align: justify;
-  margin-bottom: 20px;
 }
 
 .parrafos-blog__destacado {
@@ -346,6 +404,26 @@ https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ 
   letter-spacing: 2px;
   line-height: 1.5rem;
   font-size: 1.2em;
+}
+
+.cita {
+  padding-top: 12px;
+}
+
+.cita__texto {
+  font-size: 1.5em;
+  text-align: left;
+  font-style: italic;
+}
+
+.cita__autor {
+  text-align: right;
+  font-size: 0.7em;
+  float: right;
+}
+
+.parrafos-blog__separador {
+  border-top: 4px solid $color_fest_rosa;
 }
 
 .texto--destacado {
