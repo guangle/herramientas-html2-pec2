@@ -400,7 +400,7 @@ https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ 
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: justify;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.1px;
 }
 
 .parrafos-blog__destacado {
@@ -408,6 +408,46 @@ https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ 
   font-size: 1.2em;
   line-height: 1.5rem;
   letter-spacing: 2px;
+}
+
+.parrafos-blog::first-letter {
+  font-size: 1.5em;
+}
+
+//Adaptado de https://css-tricks.com/custom-list-number-styling/
+ol {
+  padding-left: 40px;
+  list-style: none;
+  counter-reset: contador;
+}
+ol li {
+  position: relative;
+  margin: 20px 0;
+  counter-increment: contador;
+}
+ol li::before {
+  position: absolute;
+  top: 0;
+  left: calc(-1 * var(--size) - 10px);
+  width: var(--size);
+  height: var(--size);
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: var(--size);
+
+  color: $color_fest_amarillo;
+
+  --size: 28px;
+
+  text-align: center;
+  content: counter(contador);
+
+  background: $color_fest_oscuro1;
+
+  border-radius: 50%;
+  box-shadow: 1px 1px 4px $color_fest_azul;
+  transform: rotate(-10deg);
 }
 
 .cita {
@@ -434,8 +474,8 @@ https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ 
   display: inline-block;
   font-weight: 700;
   line-height: 0.85;
-  text-shadow: 4px -4px 3px #ffe66b;
-  border-bottom: 3px solid #ffe66b;
+  text-shadow: 2px 2px 8px $color_fest_amarillo;
+  border-bottom: 3px solid $color_fest_amarillo;
 }
 
 //refact
