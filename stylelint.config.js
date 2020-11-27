@@ -6,7 +6,7 @@ module.exports = {
       'stylelint-order'
     ],
     "rules": {
-      "indentation": 2,
+      "indentation": null,
       "no-descending-specificity": null,
       "no-eol-whitespace": null,
       "declaration-empty-line-before": null,

@@ -9,11 +9,8 @@
 import "bootstrap";
 //import "@fortawesome/fontawesome-free/css/all.css";
 
+import Twitter from 'twitter-lite';
 
-
-document.addEventListener('DOMContentLoaded', function () {
-  console.log("Hello, añejo music fest!");
-});
 
 /** Funcion que se ejecuta en los diferentes test que hay en la web,
  * se encarga, en funcion de si la respuesta es correcta o no, mostrar

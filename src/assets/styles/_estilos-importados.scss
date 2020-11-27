@@ -28,7 +28,7 @@
 }
 
 .titulo-neon {
-  margin: 25px 40;
+  margin: 15px 5px;
   text-align: center;
   border: 5px solid #1086e8;
   border-radius: 20;
@@ -41,6 +41,23 @@
   color: #ff00e6;
   letter-spacing: 6px;
   animation: text-flicker 10s linear infinite;
+}
+
+@media only screen and (max-width: 700px) {
+  .titulo-neon {
+    margin: 5px 2px;
+    text-align: center;
+    border: 4px solid #1086e8;
+    border-radius: 10;
+    animation: border-flicker 4s linear infinite;
+  }
+  .titulo-neon__texto {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    color: #ff00e6;
+    letter-spacing: 6px;
+    animation: text-flicker 10s linear infinite;
+  }
 }
 
 .offset {

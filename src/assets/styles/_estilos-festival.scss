@@ -27,10 +27,15 @@ body {
   margin: 5% 15%;
 }
 
-.grid-container {
+/* CSS GRID :
+crearemos dos versiones del grid, una para ver en escritorio y otra para dispositivos móviles.
+Hemos establecido el punto de corte en 700px de ancho de pantalla y la versión movil es más
+reducida, con las cuariculas algo más pequeña y menos elementos. */
+
+.contenedor-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(5, 100px) 60px;
+  grid-template-rows: repeat(5, 100px) 50px;
   gap: 4px 4px;
   grid-template-areas:
     "none none titulo titulo titulo"
@@ -43,10 +48,10 @@ body {
 }
 
 @media only screen and (max-width: 700px) {
-  .grid-container {
+  .contenedor-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(4, 90px) 50px;
+    grid-template-rows: repeat(4, 80px) 40px;
     gap: 2px 2px;
     grid-template-areas:
       "titulo titulo titulo titulo"
@@ -56,33 +61,29 @@ body {
       "degradado degradado degradado degradado";
     opacity: 1;
   }
-  .none {
-    display: none;
-  }
-  .ambigu {
-    display: none;
-  }
-  .grupos {
-    display: none;
-  }
-  .foto2,
-  .foto3,
-  .foto4 {
+  //Estas cuadrículas no apareceran en la versión movil del grid
+  .contenedor-grid__none,
+  .contenedor-grid__ambigu,
+  .contenedor-grid__grupos,
+  .contenedor-grid__foto2,
+  .contenedor-grid__foto3,
+  .contenedor-grid__foto4 {
     display: none;
   }
 }
 
-.none {
+/* Definicion de las diferentes areas del grid */
+.contenedor-grid__none {
   grid-area: none;
   background: transparent;
 }
 
-.titulo {
+.contenedor-grid__titulo {
   grid-area: titulo;
   background: transparent;
 }
 
-.grupos {
+.contenedor-grid__grupos {
   grid-area: grupos;
   font-size: 3em;
   line-height: 50px;
@@ -91,16 +92,16 @@ body {
   background: transparent;
 }
 
-.neon1 {
+.contenedor-grid__neon1 {
   grid-area: neon1;
   background: #ff00e6;
 }
 
-.foto1 {
+.contenedor-grid__foto1 {
   grid-area: foto1;
 }
 
-.solido {
+.contenedor-grid__solido {
   grid-area: solido;
   background-image: linear-gradient(
     to right,
@@ -119,12 +120,12 @@ body {
   );
 }
 
-.enlaceGrid {
+.contenedor-grid__enlaceGrid {
   display: block;
   font-size: 0.5em;
 }
 
-.ambigu {
+.contenedor-grid__ambigu {
   grid-area: ambigu;
   font-size: 3em;
   line-height: 50px;
@@ -134,36 +135,36 @@ body {
   background: transparent;
 }
 
-.logo {
+.contenedor-grid__logo {
   grid-area: logo;
 }
 
-.solido2 {
+.contenedor-grid__solido2 {
   grid-area: solido2;
   background: transparent;
 }
 
-.foto2 {
+.contenedor-grid__foto2 {
   grid-area: foto2;
 }
 
-.foto3 {
+.contenedor-grid__foto3 {
   grid-area: foto3;
 }
 
-.foto4 {
+.contenedor-grid__foto4 {
   grid-area: foto4;
 }
 
-.foto5 {
+.contenedor-grid__foto5 {
   grid-area: foto5;
 }
 
-.foto6 {
+.contenedor-grid__foto6 {
   grid-area: foto6;
 }
 
-.degradado {
+.contenedor-grid__degradado {
   grid-area: degradado;
   background-image: linear-gradient(
     to right top,
@@ -181,6 +182,8 @@ body {
     #e1cd60
   );
 }
+
+/* Fin de la definicion de las clases correspondientes a las areas del grid */
 
 //Ordenar todo esto
 .contenedor-preguntas {
@@ -280,8 +283,8 @@ body {
 }
 
 .grupo__foto {
-  margin: auto;
   display: block;
+  margin: auto;
 }
 
 .grupo--destacado {
@@ -370,10 +373,11 @@ https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ 
 }
 
 .titulo-subseccion {
+  padding-left: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
+
   text-align: left;
-  padding-left: 20px;
 }
 
 .titulo-subseccion__texto {
@@ -395,15 +399,15 @@ https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ 
 .parrafos-blog {
   margin-top: 10px;
   margin-bottom: 10px;
-  letter-spacing: 1.5px;
   text-align: justify;
+  letter-spacing: 1.5px;
 }
 
 .parrafos-blog__destacado {
   margin-bottom: 10px;
-  letter-spacing: 2px;
-  line-height: 1.5rem;
   font-size: 1.2em;
+  line-height: 1.5rem;
+  letter-spacing: 2px;
 }
 
 .cita {
@@ -412,14 +416,14 @@ https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ 
 
 .cita__texto {
   font-size: 1.5em;
-  text-align: left;
   font-style: italic;
+  text-align: left;
 }
 
 .cita__autor {
-  text-align: right;
-  font-size: 0.7em;
   float: right;
+  font-size: 0.7em;
+  text-align: right;
 }
 
 .parrafos-blog__separador {
@@ -427,11 +431,11 @@ https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ 
 }
 
 .texto--destacado {
-  font-weight: 700;
-  border-bottom: 3px solid #ffe66b;
   display: inline-block;
+  font-weight: 700;
   line-height: 0.85;
   text-shadow: 4px -4px 3px #ffe66b;
+  border-bottom: 3px solid #ffe66b;
 }
 
 //refact
@@ -439,37 +443,36 @@ https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ 
   position: absolute;
   top: 70%;
   left: 30%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
   padding: 25px;
+  text-align: center;
   background: $color_fest_claro1;
   border: 5px solid;
 
   border-image: linear-gradient(
       90deg,
-      #8223b2 20%,
-      #d90368 0,
-      #d90368 40%,
-      #f1e9da 0,
-      #f1e9da 60%,
-      #2e294e 0,
-      #2e294e 80%,
-      #ffe66b 0
+      $color_fest_oscuro1 20%,
+      $color_fest_rosa 0,
+      $color_fest_rosa 40%,
+      $color_fest_azul 0,
+      $color_fest_azul 60%,
+      $color_fest_verde 0,
+      $color_fest_verde 80%,
+      $color_fest_amarillo 0
     )
     5;
+  transform: translate(-50%, -50%);
 }
 
 .span_titulo_1 {
-  color: $color_fest_oscuro1;
   display: block;
   font-size: 2em;
+  color: $color_fest_oscuro1;
 }
 
 .span_titulo_2 {
-  color: $color_fest_oscuro1;
   display: block;
   font-size: 1.6em;
+  color: $color_fest_oscuro1;
 }
 
 //Si la pantalla mide menos de 700 --> 1 columna
@@ -478,35 +481,45 @@ https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ 
     position: absolute;
     top: 30%;
     left: 30%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
     padding: 5px;
+    text-align: center;
     background: $color_fest_claro1;
     border: 4px solid;
-
     border-image: linear-gradient(
         90deg,
-        #8223b2 20%,
-        #d90368 0,
-        #d90368 40%,
-        #f1e9da 0,
-        #f1e9da 60%,
-        #2e294e 0,
-        #2e294e 80%,
-        #ffe66b 0
+        $color_fest_oscuro1 20%,
+        $color_fest_rosa 0,
+        $color_fest_rosa 40%,
+        $color_fest_azul 0,
+        $color_fest_azul 60%,
+        $color_fest_verde 0,
+        $color_fest_verde 80%,
+        $color_fest_amarillo 0
       )
       5;
+    transform: translate(-50%, -50%);
   }
   .span_titulo_1 {
-    color: $color_fest_oscuro1;
     display: block;
     font-size: 1.3em;
+    color: $color_fest_oscuro1;
   }
 
   .span_titulo_2 {
-    color: $color_fest_oscuro1;
     display: block;
     font-size: 1.2em;
+    color: $color_fest_oscuro1;
+  }
+}
+
+/** Sección ambigu */
+.card_pregunta {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  .card_pregunta {
+    margin-right: 5%;
+    margin-left: 5%;
   }
 }
