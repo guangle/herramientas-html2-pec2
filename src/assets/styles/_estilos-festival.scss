@@ -27,97 +27,37 @@ body {
   margin: 5% 15%;
 }
 
-/* CSS GRID :
-crearemos dos versiones del grid, una para ver en escritorio y otra para dispositivos móviles.
-Hemos establecido el punto de corte en 700px de ancho de pantalla y la versión movil es más
-reducida, con las cuariculas algo más pequeña y menos elementos. */
-
+/* Portada */
+//Por defecto, una versión de la portada simple
+//para aquelos navegaores que no soporten display:grid
 .contenedor-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(5, 100px) 50px;
-  gap: 4px 4px;
-  grid-template-areas:
-    "none none titulo titulo titulo"
-    "grupos neon1 foto1 foto1 foto1"
-    "solido ambigu foto1 foto1 foto1"
-    "logo solido2 foto2 foto3 foto4"
-    "logo solido2 foto2 foto5 foto6"
-    "degradado degradado degradado degradado degradado";
-  opacity: 1;
+  background: $color_fest_oscuro2;
 }
 
-@media only screen and (max-width: 700px) {
-  .contenedor-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(4, 80px) 40px;
-    gap: 2px 2px;
-    grid-template-areas:
-      "titulo titulo titulo titulo"
-      "neon1 foto1 foto1 foto1"
-      "solido foto1 foto1 foto1"
-      "logo solido2 foto5 foto6"
-      "degradado degradado degradado degradado";
-    opacity: 1;
-  }
-  //Estas cuadrículas no apareceran en la versión movil del grid
-  .contenedor-grid__none,
-  .contenedor-grid__ambigu,
-  .contenedor-grid__grupos,
-  .contenedor-grid__foto2,
-  .contenedor-grid__foto3,
-  .contenedor-grid__foto4 {
-    display: none;
-  }
-}
-
-/* Definicion de las diferentes areas del grid */
 .contenedor-grid__none {
-  grid-area: none;
-  background: transparent;
+  display: none;
 }
 
 .contenedor-grid__titulo {
-  grid-area: titulo;
   background: transparent;
 }
 
 .contenedor-grid__grupos {
-  grid-area: grupos;
   font-size: 3em;
   line-height: 50px;
   text-align: center;
-
   background: transparent;
 }
 
 .contenedor-grid__neon1 {
   grid-area: neon1;
   background: #ff00e6;
-}
-
-.contenedor-grid__foto1 {
-  grid-area: foto1;
+  display: none;
 }
 
 .contenedor-grid__solido {
+  display: none;
   grid-area: solido;
-  background-image: linear-gradient(
-    to right,
-    #5239d0,
-    #3e4dd8,
-    #285ddd,
-    #0f6bdf,
-    #0078e0,
-    #0087e5,
-    #0095e8,
-    #00a2ea,
-    #00b5ec,
-    #00c5df,
-    #00d3c6,
-    #0edda4
-  );
 }
 
 .contenedor-grid__enlaceGrid {
@@ -131,37 +71,39 @@ reducida, con las cuariculas algo más pequeña y menos elementos. */
   line-height: 50px;
   color: #ff6188;
   text-align: center;
-
   background: transparent;
 }
 
 .contenedor-grid__logo {
-  grid-area: logo;
+  display: none;
 }
 
 .contenedor-grid__solido2 {
-  grid-area: solido2;
-  background: transparent;
+  display: none;
+}
+
+.contenedor-grid__foto1 {
+  height: 300px;
 }
 
 .contenedor-grid__foto2 {
-  grid-area: foto2;
+  display: none;
 }
 
 .contenedor-grid__foto3 {
-  grid-area: foto3;
+  display: none;
 }
 
 .contenedor-grid__foto4 {
-  grid-area: foto4;
+  display: none;
 }
 
 .contenedor-grid__foto5 {
-  grid-area: foto5;
+  display: none;
 }
 
 .contenedor-grid__foto6 {
-  grid-area: foto6;
+  display: none;
 }
 
 .contenedor-grid__degradado {
@@ -181,6 +123,184 @@ reducida, con las cuariculas algo más pequeña y menos elementos. */
     #f5b255,
     #e1cd60
   );
+}
+
+@supports (display: grid) {
+  //Si nuestro navegador soporta grid,
+  //(que sería lo normal)
+  //rescribimos el css para mostrar un GRID
+
+  /* Crearemos dos versiones del grid,
+  una para ver en escritorio y otra para dispositivos móviles.
+  Hemos establecido el punto de corte en 700px de ancho de pantalla
+  y la versión movil es más reducida,
+  con las cuariculas algo más pequeña y menos elementos. */
+
+  .contenedor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 100px) 50px;
+    gap: 4px 4px;
+    grid-template-areas:
+      "none none titulo titulo titulo"
+      "grupos neon1 foto1 foto1 foto1"
+      "solido ambigu foto1 foto1 foto1"
+      "logo solido2 foto2 foto3 foto4"
+      "logo solido2 foto2 foto5 foto6"
+      "degradado degradado degradado degradado degradado";
+    opacity: 1;
+  }
+
+  /* Definicion de las diferentes areas del grid */
+  .contenedor-grid__none {
+    grid-area: none;
+    display: block;
+    background: transparent;
+  }
+
+  .contenedor-grid__titulo {
+    grid-area: titulo;
+    display: block;
+    background: transparent;
+  }
+
+  .contenedor-grid__grupos {
+    grid-area: grupos;
+    font-size: 2em;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+    background: transparent;
+  }
+
+  .contenedor-grid__neon1 {
+    grid-area: neon1;
+    background: #ff00e6;
+    display: block;
+  }
+
+  .contenedor-grid__foto1 {
+    grid-area: foto1;
+    height: auto;
+  }
+
+  .contenedor-grid__solido {
+    grid-area: solido;
+    display: block;
+    background-image: linear-gradient(
+      to right,
+      #5239d0,
+      #3e4dd8,
+      #285ddd,
+      #0f6bdf,
+      #0078e0,
+      #0087e5,
+      #0095e8,
+      #00a2ea,
+      #00b5ec,
+      #00c5df,
+      #00d3c6,
+      #0edda4
+    );
+  }
+
+  .contenedor-grid__enlaceGrid {
+    display: block;
+    display: block;
+    font-size: 0.5em;
+  }
+
+  .contenedor-grid__ambigu {
+    grid-area: ambigu;
+    display: block;
+    font-size: 2em;
+    line-height: 50px;
+    color: #ff6188;
+    text-align: center;
+    background: transparent;
+  }
+
+  .contenedor-grid__logo {
+    grid-area: logo;
+    display: block;
+  }
+
+  .contenedor-grid__solido2 {
+    grid-area: solido2;
+    display: block;
+    background: transparent;
+  }
+
+  .contenedor-grid__foto2 {
+    grid-area: foto2;
+    display: block;
+  }
+
+  .contenedor-grid__foto3 {
+    grid-area: foto3;
+    display: block;
+  }
+
+  .contenedor-grid__foto4 {
+    grid-area: foto4;
+    display: block;
+  }
+
+  .contenedor-grid__foto5 {
+    grid-area: foto5;
+    display: block;
+  }
+
+  .contenedor-grid__foto6 {
+    grid-area: foto6;
+    display: block;
+  }
+
+  .contenedor-grid__degradado {
+    display: block;
+    grid-area: degradado;
+    background-image: linear-gradient(
+      to right top,
+      #6c22bd,
+      #8b25bb,
+      #a52bb9,
+      #bc34b7,
+      #d040b5,
+      #e645a5,
+      #f55195,
+      #ff6188,
+      #ff796e,
+      #ff965b,
+      #f5b255,
+      #e1cd60
+    );
+  }
+
+  //Versión móvil de nuestro GRID:
+  @media only screen and (max-width: 700px) {
+    .contenedor-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: repeat(4, 80px) 40px;
+      gap: 2px 2px;
+      grid-template-areas:
+        "titulo titulo titulo titulo"
+        "neon1 foto1 foto1 foto1"
+        "solido foto1 foto1 foto1"
+        "logo solido2 foto5 foto6"
+        "degradado degradado degradado degradado";
+      opacity: 1;
+    }
+    //Estas cuadrículas no apareceran en la versión movil del grid
+    .contenedor-grid__none,
+    .contenedor-grid__ambigu,
+    .contenedor-grid__grupos,
+    .contenedor-grid__foto2,
+    .contenedor-grid__foto3,
+    .contenedor-grid__foto4 {
+      display: none;
+    }
+  }
 }
 
 /* Fin de la definicion de las clases correspondientes a las areas del grid */
@@ -280,6 +400,14 @@ reducida, con las cuariculas algo más pequeña y menos elementos. */
 
 .grupo {
   margin-bottom: 20px;
+  /** Esto lo he adaptado de
+    https://codepen.io/lincohn/pen/JjPZgXw
+    */
+  &:hover {
+    box-shadow: inset 0 0 30px #fff, inset 10px 0 40px #f0f,
+      inset -10px 0 40px #0ff, inset 10px 0 150px #f0f, inset -10px 0 150px #0ff,
+      0 0 30px #fff, -10px 0 40px #f0f, 10px 0 40px #0ff;
+  }
 }
 
 .grupo__foto {
@@ -412,42 +540,6 @@ https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ 
 
 .parrafos-blog::first-letter {
   font-size: 1.5em;
-}
-
-//Adaptado de https://css-tricks.com/custom-list-number-styling/
-ol {
-  padding-left: 40px;
-  list-style: none;
-  counter-reset: contador;
-}
-ol li {
-  position: relative;
-  margin: 20px 0;
-  counter-increment: contador;
-}
-ol li::before {
-  position: absolute;
-  top: 0;
-  left: calc(-1 * var(--size) - 10px);
-  width: var(--size);
-  height: var(--size);
-
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: var(--size);
-
-  color: $color_fest_amarillo;
-
-  --size: 28px;
-
-  text-align: center;
-  content: counter(contador);
-
-  background: $color_fest_oscuro1;
-
-  border-radius: 50%;
-  box-shadow: 1px 1px 4px $color_fest_azul;
-  transform: rotate(-10deg);
 }
 
 .cita {

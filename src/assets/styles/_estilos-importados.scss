@@ -188,11 +188,41 @@
   }
 }
 
-/** tarjetas : esto lo he adaptado de
-https://codepen.io/lincohn/pen/JjPZgXw
-*/
-.grupo:hover {
-  box-shadow: inset 0 0 60 #fff, inset 20 0 80 #f0f, inset -20 0 80 #0ff,
-    inset 20 0 300 #f0f, inset -20 0 300 #0ff, 0 0 50 #fff, -10 0 80 #f0f,
-    10 0 80 #0ff;
+/* Grupos */
+
+/* Blog */
+//Adaptado de https://css-tricks.com/custom-list-number-styling/
+.filosofia-festival {
+  padding-left: 40px;
+  list-style: none;
+  counter-reset: contador;
+}
+.filosofia-festival__item {
+  position: relative;
+  margin: 20px 0;
+  counter-increment: contador;
+}
+.filosofia-festival__item::before {
+  position: absolute;
+  top: 0;
+  left: calc(-1 * var(--size) - 10px);
+  width: var(--size);
+  height: var(--size);
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: var(--size);
+
+  color: $color_fest_amarillo;
+
+  --size: 28px;
+
+  text-align: center;
+  content: counter(contador);
+
+  background: $color_fest_oscuro1;
+
+  border-radius: 50%;
+  box-shadow: 1px 1px 4px $color_fest_azul;
+  transform: rotate(-10deg);
 }
