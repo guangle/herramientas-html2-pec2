@@ -39,6 +39,7 @@ var respuesta = function () {
   }
 };
 
+//Aplicamos la función implementada a cada una de las respuestas
 var respuestas = document.getElementsByClassName("respuesta");
 Array.from(respuestas).forEach(function (r) {
   r.addEventListener("click", respuesta);

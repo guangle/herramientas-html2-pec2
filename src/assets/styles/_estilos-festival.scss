@@ -22,12 +22,30 @@ body {
   }
 }
 
-.carel-portada {
+/* Header */
+.header-menu {
+  padding: 2px;
+}
+
+.header-menu__link {
+  font-family: $font-family-trispace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* Fin de header */
+
+/* Portada */
+
+.cartel-portada {
   width: 70%;
   margin: 5% 15%;
 }
 
-/* Portada */
 //Por defecto, una versión de la portada simple
 //para aquelos navegaores que no soporten display:grid
 .contenedor-grid {
@@ -50,9 +68,9 @@ body {
 }
 
 .contenedor-grid__neon1 {
-  grid-area: neon1;
-  background: #ff00e6;
   display: none;
+  grid-area: neon1;
+  background: $color_fest_rosa;
 }
 
 .contenedor-grid__solido {
@@ -69,7 +87,6 @@ body {
   grid-area: ambigu;
   font-size: 3em;
   line-height: 50px;
-  color: #ff6188;
   text-align: center;
   background: transparent;
 }
@@ -86,22 +103,10 @@ body {
   height: 300px;
 }
 
-.contenedor-grid__foto2 {
-  display: none;
-}
-
-.contenedor-grid__foto3 {
-  display: none;
-}
-
-.contenedor-grid__foto4 {
-  display: none;
-}
-
-.contenedor-grid__foto5 {
-  display: none;
-}
-
+.contenedor-grid__foto2,
+.contenedor-grid__foto3,
+.contenedor-grid__foto4,
+.contenedor-grid__foto5,
 .contenedor-grid__foto6 {
   display: none;
 }
@@ -125,6 +130,9 @@ body {
   );
 }
 
+//Fin de la implementación por defecto
+//Para aquellos navegadores que no soporta grid
+
 @supports (display: grid) {
   //Si nuestro navegador soporta grid,
   //(que sería lo normal)
@@ -144,7 +152,7 @@ body {
     grid-template-areas:
       "none none titulo titulo titulo"
       "grupos neon1 foto1 foto1 foto1"
-      "solido ambigu foto1 foto1 foto1"
+      "degradado-azul ambigu foto1 foto1 foto1"
       "logo solido2 foto2 foto3 foto4"
       "logo solido2 foto2 foto5 foto6"
       "degradado degradado degradado degradado degradado";
@@ -165,18 +173,19 @@ body {
   }
 
   .contenedor-grid__grupos {
+    display: block;
     grid-area: grupos;
     font-size: 2em;
     line-height: 50px;
     text-align: center;
-    display: block;
+
     background: transparent;
   }
 
   .contenedor-grid__neon1 {
-    grid-area: neon1;
-    background: #ff00e6;
     display: block;
+    grid-area: neon1;
+    background: $color_fest_rosa;
   }
 
   .contenedor-grid__foto1 {
@@ -184,8 +193,8 @@ body {
     height: auto;
   }
 
-  .contenedor-grid__solido {
-    grid-area: solido;
+  .contenedor-grid__degradado-azul {
+    grid-area: degradado-azul;
     display: block;
     background-image: linear-gradient(
       to right,
@@ -206,7 +215,6 @@ body {
 
   .contenedor-grid__enlaceGrid {
     display: block;
-    display: block;
     font-size: 0.5em;
   }
 
@@ -215,7 +223,6 @@ body {
     display: block;
     font-size: 2em;
     line-height: 50px;
-    color: #ff6188;
     text-align: center;
     background: transparent;
   }
@@ -259,21 +266,6 @@ body {
   .contenedor-grid__degradado {
     display: block;
     grid-area: degradado;
-    background-image: linear-gradient(
-      to right top,
-      #6c22bd,
-      #8b25bb,
-      #a52bb9,
-      #bc34b7,
-      #d040b5,
-      #e645a5,
-      #f55195,
-      #ff6188,
-      #ff796e,
-      #ff965b,
-      #f5b255,
-      #e1cd60
-    );
   }
 
   //Versión móvil de nuestro GRID:
@@ -286,7 +278,7 @@ body {
       grid-template-areas:
         "titulo titulo titulo titulo"
         "neon1 foto1 foto1 foto1"
-        "solido foto1 foto1 foto1"
+        "degradado-azul foto1 foto1 foto1"
         "logo solido2 foto5 foto6"
         "degradado degradado degradado degradado";
       opacity: 1;
@@ -305,12 +297,8 @@ body {
 
 /* Fin de la definicion de las clases correspondientes a las areas del grid */
 
-//Ordenar todo esto
-.contenedor-preguntas {
-  color: $color_fest_oscuro1;
-}
+/* Footer */
 
-/* PEC2 */
 .footer {
   display: flex;
   flex-direction: row;
@@ -323,7 +311,7 @@ body {
   margin-left: 10px;
   span {
     font-size: 16pt;
-    color: #ff00e6;
+    color: $color_fest_rosa;
   }
 }
 .footer__enlaces {
@@ -342,46 +330,15 @@ body {
   text-align: center;
 }
 
-/* layout */
-
-.contenedor {
-  width: 1000px;
-  margin: 0 auto;
-}
-
-/* header */
-.header {
-  position: fixed;
-  z-index: 5;
-  width: 260px;
-  height: 100%;
-  padding: 46px;
-  background: $color1;
-}
-
-.header__avatar {
-  width: 165px;
-  height: 165px;
-  overflow: hidden;
-  border-radius: 50%;
-}
-
-.header__img {
-  width: 100%;
-}
-
-.header__nombre {
-  margin: 34px 0;
-}
-
-.header__titulo {
-  margin: 0 0 5px;
+.copiright__texto {
   font-family: $font-family-trispace;
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 300;
   color: $color3;
-  letter-spacing: 1px;
 }
+
+/** Fin de footer */
 
 /** Página para los grupos */
 
@@ -393,16 +350,17 @@ body {
   justify-content: space-between;
 }
 
-/* GRUPOS */
 .card-body {
   color: $color_fest_oscuro1;
 }
 
 .grupo {
   margin-bottom: 20px;
+
   /** Esto lo he adaptado de
     https://codepen.io/lincohn/pen/JjPZgXw
     */
+
   &:hover {
     box-shadow: inset 0 0 30px #fff, inset 10px 0 40px #f0f,
       inset -10px 0 40px #0ff, inset 10px 0 150px #f0f, inset -10px 0 150px #0ff,
@@ -444,73 +402,6 @@ body {
 }
 .card-text {
   font-size: 1rem;
-}
-
-.header-menu {
-  padding: 2px;
-}
-
-.header-menu__link {
-  font-family: $font-family-trispace;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    text-decoration: none;
-  }
-}
-
-.copiright {
-  position: absolute;
-  bottom: 20px;
-}
-
-.copiright__texto {
-  font-family: $font-family-trispace;
-  font-size: 12px;
-  font-style: italic;
-  font-weight: 300;
-  color: $color3;
-}
-
-/* standalone rules: no hay porqué que englobar todo en la terminología BEM
-solo cuando queramos dar aportar significdo incluyendo elementos de la jerarquía en los nombres
-de las clases
-https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ */
-
-.color-rosa {
-  color: $color_fest_rosa;
-}
-
-.color-azul {
-  color: $color_fest_azul;
-}
-
-.color-amarillo {
-  color: $color_fest_amarillo;
-}
-
-.titulo-seccion {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.titulo-seccion__texto {
-  font-weight: 700;
-  border-bottom: 3px solid $color_fest_amarillo;
-}
-
-.titulo-subseccion {
-  padding-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-
-  text-align: left;
-}
-
-.titulo-subseccion__texto {
-  font-weight: 500;
-  border-bottom: 2px solid $color_fest_azul;
 }
 
 /* Sección BLOG */
@@ -570,7 +461,6 @@ https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ 
   border-bottom: 3px solid $color_fest_amarillo;
 }
 
-//refact
 .contenedor_titulo_principal {
   position: absolute;
   top: 70%;
@@ -607,15 +497,19 @@ https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ 
   color: $color_fest_oscuro1;
 }
 
-//Si la pantalla mide menos de 700 --> 1 columna
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1100px) {
+  .contenedor_titulo_principal {
+    top: 50%;
+    left: 30%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
   .contenedor_titulo_principal {
     position: absolute;
     top: 30%;
     left: 30%;
     padding: 5px;
-    text-align: center;
-    background: $color_fest_claro1;
     border: 4px solid;
     border-image: linear-gradient(
         90deg,
@@ -644,7 +538,14 @@ https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ 
   }
 }
 
-/** Sección ambigu */
+/* Fin de blog */
+
+/* Seccion ambigu */
+
+.contenedor-preguntas {
+  color: $color_fest_oscuro1;
+}
+
 .card_pregunta {
   margin-bottom: 20px;
 }
@@ -654,4 +555,46 @@ https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ 
     margin-right: 5%;
     margin-left: 5%;
   }
+}
+
+.titulo-seccion {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.titulo-seccion__texto {
+  font-weight: 700;
+  border-bottom: 3px solid $color_fest_amarillo;
+}
+
+.titulo-subseccion {
+  padding-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  text-align: left;
+}
+
+.titulo-subseccion__texto {
+  font-weight: 500;
+  border-bottom: 2px solid $color_fest_azul;
+}
+
+/* Fin de seccion ambigu */
+
+/* standalone rules: no hay porqué que englobar todo en la terminología BEM
+solo cuando queramos dar aportar significdo incluyendo elementos de la jerarquía en los nombres
+de las clases
+https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ */
+
+.color-rosa {
+  color: $color_fest_rosa;
+}
+
+.color-azul {
+  color: $color_fest_azul;
+}
+
+.color-amarillo {
+  color: $color_fest_amarillo;
 }

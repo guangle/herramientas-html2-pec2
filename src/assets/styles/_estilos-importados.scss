@@ -11,26 +11,28 @@
   web, usar nuestras variables, etc
 */
 
+//Neon, visto en https://codepen.io/KevinOgden/full/JEwjBB
+
 .rotulo-principal {
   text-align: center;
-  border: 4px solid #1086e8;
+  border: 4px solid $color_fest_azul;
   border-radius: 15px;
   animation: border-flicker 4s linear infinite;
 }
 
 .rotulo-principal__titulo {
-  padding-top: 2px;
+  padding-top: 4px;
   font-family: "Raleway", sans-serif;
-  font-size: 24px;
-  color: #ff00e6;
-  letter-spacing: 4px;
+  font-size: 18px;
+  color: $color_fest_rosa;
+  letter-spacing: 3px;
   animation: text-flicker 8s linear infinite;
 }
 
 .titulo-neon {
   margin: 15px 5px;
   text-align: center;
-  border: 5px solid #1086e8;
+  border: 5px solid $color_fest_azul;
   border-radius: 20;
   animation: border-flicker 4s linear infinite;
 }
@@ -38,7 +40,7 @@
 .titulo-neon__texto {
   font-family: "Raleway", sans-serif;
   font-size: 24px;
-  color: #ff00e6;
+  color: $color_fest_rosa;
   letter-spacing: 6px;
   animation: text-flicker 10s linear infinite;
 }
@@ -47,14 +49,14 @@
   .titulo-neon {
     margin: 5px 2px;
     text-align: center;
-    border: 4px solid #1086e8;
+    border: 4px solid $color_fest_azul;
     border-radius: 10;
     animation: border-flicker 4s linear infinite;
   }
   .titulo-neon__texto {
     font-family: "Raleway", sans-serif;
     font-size: 18px;
-    color: #ff00e6;
+    color: $color_fest_rosa;
     letter-spacing: 6px;
     animation: text-flicker 10s linear infinite;
   }
@@ -187,8 +189,6 @@
     opacity: 1;
   }
 }
-
-/* Grupos */
 
 /* Blog */
 //Adaptado de https://css-tricks.com/custom-list-number-styling/
